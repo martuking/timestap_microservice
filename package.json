@@ -21,7 +21,8 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://glitch.com/edit/#!/welcome-project",
+    "url":"https://github.com/martuking/timestap_microservice.git"
   },
   "license": "MIT",
   "keywords": [
