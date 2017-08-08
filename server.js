@@ -17,11 +17,14 @@ app.get("/:value",function(request, response){
   if(isNaN(value)){
     var naturalDate = new Date(value);
     naturalDate = value.toLocaleString("en-us",dataFormat);
-    var unixDate = new Date(value);
-    unixDate = 
-    
+    var unixDate = new Date(value).getTime()/1000;
   }
-  response.json({unix:value, natural:value});
+  else{
+    var unixDate = value;
+    var naturalDate = new Date(value*1000);
+    naturalDate = naturalDate.toLocaleString("en-us",dataFormat);
+  }
+  response.json({unix:unixDate, natural:naturalDate});
 });
 
 // listen for requests :)
