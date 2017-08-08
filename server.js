@@ -1,7 +1,3 @@
-// server.js
-// where your node app starts
-
-// init project
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
@@ -11,9 +7,9 @@ app.use(cors());
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
-app.get("/dateV/:value",function(request, response){
+app.get("/:value",function(request, response){
   var value = request.params.value;
-  
+  response.json({unix:value, natural:value});
 });
 
 
