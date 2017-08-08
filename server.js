@@ -9,11 +9,9 @@ app.get("/", function (request, response) {
 });
 app.get("/:value",function(request, response){
   var value = request.params.value;
+  
   response.json({unix:value, natural:value});
 });
-
-
-
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
