@@ -8,9 +8,6 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
-// http://expressjs.com/en/starter/static-files.html
-//app.use(express.static('public'));
-
 
 
 
