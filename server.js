@@ -9,7 +9,18 @@ app.get("/", function (request, response) {
 });
 app.get("/:value",function(request, response){
   var value = request.params.value;
-  
+  var dataFormat = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+  if(isNaN(value)){
+    var naturalDate = new Date(value);
+    naturalDate = value.toLocaleString("en-us",dataFormat);
+    var unixDate = new Date(value);
+    unixDate = 
+    
+  }
   response.json({unix:value, natural:value});
 });
 
