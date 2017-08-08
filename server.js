@@ -3,6 +3,7 @@
 
 // init project
 var express = require('express');
+var cors = require('cors');
 var app = express();
 
 // http://expressjs.com/en/starter/static-files.html
