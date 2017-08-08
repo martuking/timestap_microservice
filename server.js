@@ -4,10 +4,11 @@
 // init project
 var express = require('express');
 var cors = require('cors');
+var bodyParser = require('body-parser');
 var app = express();
-
+app.use(bo)
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 
 
